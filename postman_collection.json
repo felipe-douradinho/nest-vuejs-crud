@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "a68ba586-5901-47ed-b238-308d77641694",
+		"name": "Testes Praticos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "113262",
+		"_collection_link": "https://gold-trinity-953127.postman.co/workspace/My-Workspace~d1f10446-e2c2-45a3-8149-12ef9ee66c67/collection/113262-a68ba586-5901-47ed-b238-308d77641694?action=share&source=collection_link&creator=113262"
+	},
+	"item": [
+		{
+			"name": "DQR Tech",
+			"item": [
+				{
+					"name": "Knights",
+					"item": [
+						{
+							"name": "List Kinight",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Kinight (heroes)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights?is_hero=true",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights"
+									],
+									"query": [
+										{
+											"key": "is_hero",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Kinight",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Laurenti 1\",\n    \"nickname\": \"simple_Knight\",\n    \"birthday\": \"1987-11-23\",\n    \"weapons\": [\n        {\n            \"name\": \"sword\",\n            \"mod\": 3,\n            \"attr\": \"strength\",\n            \"equipped\": false\n        },\n        {\n            \"name\": \"gun2\",\n            \"mod\": 4,\n            \"attr\": \"dexterity\",\n            \"equipped\": true\n        }\n    ],\n    \"attributes\": {\n        \"strength\": 0,\n        \"dexterity\": 0,\n        \"constitution\": 0,\n        \"intelligence\": 0,\n        \"wisdom\": 0,\n        \"charisma\": 0\n    },\n    \"keyAttribute\": \"strength\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Knight by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights/64dbf1ce06728c320810db91",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights",
+										"64dbf1ce06728c320810db91"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Knight",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights/64de98960191bed30342f862",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights",
+										"64de98960191bed30342f862"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Knight",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nickname\": \"new-nick\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:4000/api/knights/64dbf1ce06728c320810db91",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"knights",
+										"64dbf1ce06728c320810db91"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
